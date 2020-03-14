@@ -1,0 +1,25 @@
+<idea-plugin>
+    <id>com.mmalkiew.intellij.builder-plugin</id>
+    <name>Builder generator</name>
+    <vendor email="michalmalkiewicz90@gmail.com" url="https://github.com/mmalkiew">Michal Malkiewicz</vendor>
+
+    <description><![CDATA[${project.description}]]></description>
+
+    <change-notes><![CDATA[
+
+        ]]>
+    </change-notes>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <action id="mmalkiew.builder.generator"
+                class="com.mmalkiew.intellij.builder.BuilderGeneratorAction"
+                text="Builder" description="${project.description}">
+            <add-to-group group-id="GenerateGroup" anchor="after" relative-to-action="JavaGenerateGroup2"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="shift alt B"/>
+        </action>
+    </actions>
+</idea-plugin>
