@@ -4,6 +4,8 @@ import com.intellij.codeInsight.generation.PsiFieldMember;
 import com.intellij.ide.util.MemberChooser;
 import com.intellij.openapi.application.ApplicationManager;
 import com.mmalkiew.intellij.builder.model.BuilderGeneratorModel;
+import com.mmalkiew.intellij.builder.view.components.BuilderConfiguration;
+import com.mmalkiew.intellij.builder.view.components.BuilderConfigurationButton;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,7 +15,7 @@ public class BuilderGeneratorView implements Runnable {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BuilderGeneratorView.class);
 
-    private static final String TITLE = "Builder options";
+    private static final String TITLE = "Select Fields To Generate Builder";
 
     private final BuilderGeneratorModel model;
 
@@ -28,7 +30,10 @@ public class BuilderGeneratorView implements Runnable {
 
     @Override
     public void run() {
-        final JCheckBox[] optionCheckBoxes = new JCheckBox[0];
+        BuilderConfiguration configuration = new BuilderConfiguration();
+        JComponent[] optionCheckBoxes = new JComponent[1];
+        BuilderConfigurationButton configurationButton = new BuilderConfigurationButton(configuration);
+        optionCheckBoxes[0] = configurationButton;
 
         final PsiFieldMember[] memberArray = new PsiFieldMember[0];
 

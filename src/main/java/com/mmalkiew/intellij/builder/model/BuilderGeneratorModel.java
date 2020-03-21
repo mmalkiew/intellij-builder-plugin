@@ -33,4 +33,5 @@ public class BuilderGeneratorModel {
     public PsiFile getFile() {
         return file;
     }
+
 }
