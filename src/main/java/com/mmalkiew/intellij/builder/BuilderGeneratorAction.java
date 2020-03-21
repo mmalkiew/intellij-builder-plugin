@@ -16,14 +16,13 @@ public class BuilderGeneratorAction extends BaseCodeInsightAction {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(BuilderGeneratorAction.class);
 
-    private final BuilderGeneratorModel model;
-    private final BuilderGeneratorView view;
     private final BuilderGeneratorHandler actionHandler;
 
     public BuilderGeneratorAction() {
-        this.model = new BuilderGeneratorModel();
-        this.view = new BuilderGeneratorView(this.model);
-        this.actionHandler = new BuilderGeneratorHandler(this.model, this.view);
+        BuilderGeneratorModel model = new BuilderGeneratorModel();
+        BuilderGeneratorView view = new BuilderGeneratorView(model);
+
+        this.actionHandler = new BuilderGeneratorHandler(model, view);
     }
 
     @NotNull

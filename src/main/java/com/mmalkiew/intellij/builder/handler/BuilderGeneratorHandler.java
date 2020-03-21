@@ -39,7 +39,8 @@ public class BuilderGeneratorHandler implements LanguageCodeInsightActionHandler
 
     @Override
     public void invoke(@NotNull Project project, @NotNull Editor editor, @NotNull PsiFile file) {
-        LOGGER.warn("waiting for implementation ...");
+        model.updateModel(project, editor, file);
+        view.showView();
     }
 
 
