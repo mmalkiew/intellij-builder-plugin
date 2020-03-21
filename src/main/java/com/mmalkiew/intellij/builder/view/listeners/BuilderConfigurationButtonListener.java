@@ -1,4 +1,7 @@
-package com.mmalkiew.intellij.builder.view.components;
+package com.mmalkiew.intellij.builder.view.listeners;
+
+import com.mmalkiew.intellij.builder.view.BuilderConfigurationView;
+import com.mmalkiew.intellij.builder.model.BuilderConfiguration;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;

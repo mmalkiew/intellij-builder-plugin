@@ -1,5 +1,8 @@
 package com.mmalkiew.intellij.builder.view.components;
 
+import com.mmalkiew.intellij.builder.model.BuilderConfiguration;
+import com.mmalkiew.intellij.builder.view.listeners.BuilderConfigurationButtonListener;
+
 import javax.swing.*;
 
 public class BuilderConfigurationButton extends JButton {

@@ -4,7 +4,7 @@ import com.intellij.codeInsight.generation.PsiFieldMember;
 import com.intellij.ide.util.MemberChooser;
 import com.intellij.openapi.application.ApplicationManager;
 import com.mmalkiew.intellij.builder.model.BuilderGeneratorModel;
-import com.mmalkiew.intellij.builder.view.components.BuilderConfiguration;
+import com.mmalkiew.intellij.builder.model.BuilderConfiguration;
 import com.mmalkiew.intellij.builder.view.components.BuilderConfigurationButton;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
